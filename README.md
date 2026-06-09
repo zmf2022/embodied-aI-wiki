@@ -34,7 +34,7 @@
 | VLAW | 2026 | VLAW: Iterative Co-Improvement of Vision-Language-Action Policy a |
 | VLANeXt | 2026 | VLANeXt: Recipes for Building Strong VLA Models |
 | VLA-JEPA | 2026 | VLA-JEPA: Enhancing Vision-Language-Action Model with Latent Worl |
-| StarVLA-�� | 2026 | StarVLA-��: Reducing Complexity in Vision-Language-Action Systems |
+| StarVLA | 2026 | StarVLA: Reducing Complexity in Vision-Language-Action Systems |
 | StarVLA | 2026 | StarVLA: A Lego-like Codebase for Vision-Language-Action Model De |
 | SimVLA | 2026 | SimVLA: A Simple VLA Baseline for Robotic Manipulation |
 | ROSClaw projecthttps | 2026 | ROSClaw projecthttps://www.rosclaw.io/ codehttps://github.com/ros |
