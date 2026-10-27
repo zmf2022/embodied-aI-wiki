@@ -1,5 +1,8 @@
 # 具身智能论文技术演进趋势与算法核心原理分析报告
 
+> **Embodied Lab 网站源码（统一维护）：** [网站页面与研发工作台](site/index.html) · [预览及部署说明](site/README.md)。GTC 2026 研究专题已接入网页的「技术知识库」，网页与研究文档均在本仓库管理。
+
+
 > **2026-10-27 最新研究专题：** [GTC Berlin 2026 具身智能技术洞察与后续研发路线](研究洞察/GTC_2026_Berlin_具身智能与后续研发路线.md) — Isaac Lab 3.0、Isaac OS、Microduck Agent、Embodied Autoresearch、VLA 纠偏与 8 周路线图。
 
 > 分析范围：625篇论文（2025-2026年arXiv具身智能方向）
