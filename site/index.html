@@ -2,12 +2,241 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Embodied Lab · 具身智能实验室</title><meta name="description" content="具身智能研发空间：项目、论文洞察、实验路线和研发工作台。">
 <style>
 :root{--bg:#f5f6f3;--paper:#fff;--ink:#171e1c;--sub:#69736f;--line:#e3e7e2;--green:#26745b;--mint:#eaf4ee;--sidebar:#14231f}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif}button,input{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}.layout{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}.aside{background:var(--sidebar);color:white;padding:31px 22px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}.brand{font-size:22px;font-weight:800;letter-spacing:-.4px}.brand small{display:block;font-size:11px;letter-spacing:2px;font-weight:600;color:#a2b8ac;margin-top:0}.nav{margin-top:52px;display:grid;gap:9px}.nav button{display:flex;text-align:left;align-items:center;gap:14px;background:none;border:0;border-radius:9px;color:#c2d3c9;padding:13px;font-size:14px;width:100%}.nav button:hover,.nav button.active{background:#294339;color:#fff}.nav span{font-size:11px;color:#839c90;margin-left:auto}.asidefoot{margin-top:auto;color:#8ba799;font-size:12px}.main{padding:36px clamp(24px,5vw,90px) 70px;max-width:1600px;width:100%}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:51px;color:#7e8782;font-size:12px;letter-spacing:1.1px}.status{display:inline-flex;align-items:center;gap:8px}.status:before{content:"";width:7px;height:7px;background:#3eb386;border-radius:50%}h1{font-size:clamp(31px,3.8vw,57px);line-height:1.2;letter-spacing:-1.6px;margin:8px 0 22px;font-weight:750}h2{font-size:24px;letter-spacing:-.5px;margin:0 0 8px}h3{font-size:18px;margin:0 0 7px}p{margin:8px 0}.lead{font-size:17px;color:#61706a;max-width:790px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:24px;min-width:0}.card p{color:var(--sub);font-size:14px}.card .num{color:#94a09a;font-size:11px;letter-spacing:1.4px;font-weight:700}.pill{display:inline-block;background:var(--mint);border-radius:100px;color:var(--green);font-size:12px;padding:3px 10px;margin:3px 4px 0 0}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.heading{margin:49px 0 19px}.heading .muted{font-size:14px;color:var(--sub)}.action{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700;font-size:13px;cursor:pointer;background:none;border:0;padding:0}.hero{background:#18372c;color:#fff;padding:42px;border-radius:18px;position:relative;overflow:hidden}.hero p{color:#adc9b9;max-width:700px}.hero h1{max-width:850px}.hero .eyebrow{color:#a8ddc5}.hero .action{color:#c1ecd7}.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:18px}.kpis strong{display:block;font-size:28px}.kpis span{color:var(--sub);font-size:12px}.tags{margin-top:18px}.breadcrumb{color:var(--sub);font-size:12px;margin-bottom:23px}.article{max-width:920px}.article h2{margin:36px 0 12px}.article h3{margin:22px 0 8px}.article p,.article li{color:#4c5b54}.article ul{padding-left:23px}.article table{width:100%;border-collapse:collapse;font-size:14px;margin:15px 0 23px}.article th,.article td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid var(--line)}.article th{background:#eaf0eb}.diagram{border:1px solid var(--line);background:white;padding:22px;border-radius:16px;margin:22px 0}.diagram .node{border:1px solid #d2ded4;background:#f8fbf8;padding:15px;border-radius:10px;text-align:center;font-weight:650}.diagram .accent{border-color:#7fb99d;background:#eaf6ef}.diagram .arrow{text-align:center;color:#7b8e80;padding:7px}.diagram .mini{font-weight:400;color:#678072;font-size:12px;display:block}.work-item{display:flex;gap:13px;border-bottom:1px solid var(--line);padding:15px 0;align-items:flex-start}.work-item:last-child{border-bottom:0}.work-item input{accent-color:var(--green);width:19px;height:19px;margin-top:3px}.work-item .done{text-decoration:line-through;color:#95a199}.small{color:var(--sub);font-size:12px}.ghost{padding:9px 14px;border:1px solid #cdd9d1;border-radius:8px;color:var(--green);background:white;font-weight:700}.links{display:flex;gap:14px;flex-wrap:wrap}.links a{text-decoration:underline;text-underline-offset:3px;color:var(--green)}.mobilebar{display:none}.footer{color:#9aa59f;font-size:12px;margin-top:60px;border-top:1px solid var(--line);padding-top:24px}code{background:#eef2ef;padding:2px 4px;border-radius:4px}@media(max-width:1020px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:205px minmax(0,1fr)}.aside{padding:26px 14px}.main{padding:30px}}@media(max-width:700px){.layout{display:block}.aside{height:auto;position:relative;padding:18px}.brand small,.asidefoot{display:none}.nav{margin-top:15px;grid-template-columns:repeat(4,1fr);gap:4px}.nav button{padding:9px 4px;justify-content:center;font-size:12px;gap:0}.nav button span,.nav button .symbol{display:none}.main{padding:24px 16px 60px}.top{margin-bottom:27px}.grid,.two{grid-template-columns:1fr}.hero{padding:26px}.hero h1{font-size:34px}.kpis{gap:8px}.card{padding:19px}.article table{display:block;overflow:auto}}
+
+/* GTC 2026 long-form editorial */
+.gtc-report{max-width:1100px}
+.gtc-report .eyebrow{letter-spacing:1.65px}
+.gtc-report .gtc-hero{padding:36px 38px;border-radius:18px;background:linear-gradient(135deg,#163d30,#102922);color:#fff;position:relative;overflow:hidden}
+.gtc-report .gtc-hero:after{content:"";position:absolute;right:-70px;top:-160px;width:420px;height:420px;border:1px solid #4e886b;border-radius:50%;box-shadow:0 0 0 70px #ffffff07,0 0 0 140px #ffffff06;pointer-events:none}
+.gtc-report .gtc-hero>*{position:relative;z-index:1}
+.gtc-report .gtc-hero h1{font-size:clamp(32px,4vw,50px);letter-spacing:-1.1px;line-height:1.17;max-width:800px;margin:15px 0}
+.gtc-report .gtc-hero p{max-width:760px;font-size:16px;color:#c7ddcf}
+.gtc-report .gtc-hero .eyebrow{color:#a6d6b9}
+.gtc-report .gtc-hero .hero-meta{font-size:12px;color:#91b8a1;margin-top:25px;letter-spacing:.3px}
+.gtc-report .gtc-nav{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:18px}
+.gtc-report .gtc-nav-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:8px}
+.gtc-report .gtc-nav button{border:1px solid #dae6dc;background:#f7faf8;padding:8px 9px;border-radius:8px;text-align:left;color:#285943;font-size:12px}
+.gtc-report .gtc-nav button:hover{background:#e2f2e8}
+.gtc-report .report-section{margin-top:46px;scroll-margin-top:28px}
+.gtc-report .chapter-title{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px}
+.gtc-report .chapter-number{background:#eaf4ed;color:#2f7758;border-radius:8px;display:inline-grid;place-items:center;min-width:34px;height:34px;font-weight:800;font-size:13px}
+.gtc-report .chapter-title h2{margin:1px 0 3px;font-size:25px;line-height:1.35}
+.gtc-report .chapter-title p{margin:0;color:var(--sub);font-size:13px}
+.gtc-report .report-lead{color:#394e42;font-size:17px;margin:10px 0 20px}
+.gtc-report .insight-banner{background:#edf5ee;border-left:3px solid #3d9467;border-radius:0 12px 12px 0;padding:18px 21px;margin:20px 0}
+.gtc-report .insight-banner strong{display:block;color:#1e5d40;font-size:15px}
+.gtc-report .insight-banner p{margin:5px 0 0;font-size:14px}
+.gtc-report .gtc-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.gtc-report .gtc-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:19px;min-width:0}
+.gtc-report .gtc-card .chip{font-size:10px;font-weight:800;letter-spacing:1.2px;color:#317a54}
+.gtc-report .gtc-card h3{font-size:17px;line-height:1.4;margin:8px 0 7px}
+.gtc-report .gtc-card p{font-size:13px;color:#5c6f64;margin:0 0 10px}
+.gtc-report .gtc-card small{font-size:11px;color:#819088}
+.gtc-report .evidence{font-size:12px!important;color:#708379!important;margin-top:9px!important}
+.gtc-report .evidence a{color:#347b58;text-decoration:underline;text-underline-offset:2px}
+.gtc-report .track{background:white;border:1px solid var(--line);border-radius:14px;padding:18px}
+.gtc-report .track .track-row{display:grid;grid-template-columns:120px 1fr minmax(145px,1.15fr);gap:14px;align-items:center;padding:15px 4px;border-bottom:1px solid #e9eee9}
+.gtc-report .track .track-row:last-child{border-bottom:0}
+.gtc-report .track .track-row b{font-size:13px;color:#285d43}
+.gtc-report .track .track-row .track-product{font-weight:700;font-size:14px}
+.gtc-report .track .track-row .track-desc{color:#708078;font-size:12px}
+.gtc-report .gtc-steps{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:20px 0}
+.gtc-report .gtc-step{background:#eaf4ee;border:1px solid #cce1d1;border-radius:9px;padding:14px 7px;text-align:center;min-width:0}
+.gtc-report .gtc-step b{font-size:12px;display:block;line-height:1.5}
+.gtc-report .gtc-step small{display:block;font-size:10px;color:#70877b;line-height:1.4;margin-top:7px}
+.gtc-report .status-dot{display:inline-block;border-radius:50%;width:8px;height:8px;margin-right:5px;background:#74a984}
+.gtc-report .status-dot.pending{background:#d6a35b}
+.gtc-report .gtc-metric-line{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:15px 0}
+.gtc-report .metric{border:1px solid #d9e6dc;border-radius:10px;padding:15px 17px;background:white;flex:1;min-width:140px}
+.gtc-report .metric strong{display:block;font-size:24px;line-height:1.1;color:#24583d}
+.gtc-report .metric span{font-size:12px;color:#66766b}
+.gtc-report .gtc-bullets{padding-left:23px}
+.gtc-report .gtc-bullets li{padding:4px 0;color:#435a4e}
+.gtc-report .quote-line{border-left:3px solid #284c39;padding:14px 19px;color:#2a4c3a;background:#f4f8f4;font-weight:650;border-radius:0 10px 10px 0}
+.gtc-report .gtc-ref{font-size:13px;color:#566b5d;line-height:2}
+.gtc-report .gtc-ref a{color:#23734f;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.gtc-report .gtc-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.gtc-report .gtc-pair .card p{font-size:14px}
+.gtc-report .method-note{font-size:12px;color:#7a8880;padding:15px;border:1px dashed #cfdcd2;border-radius:9px}
+@media(max-width:1000px){.gtc-report .gtc-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.gtc-report .gtc-steps{grid-template-columns:repeat(3,1fr)}.gtc-report .track .track-row{grid-template-columns:95px 1fr}.gtc-report .track .track-desc{grid-column:2}}
+@media(max-width:700px){.gtc-report .gtc-hero{padding:28px 22px}.gtc-report .gtc-nav-grid{grid-template-columns:repeat(2,1fr)}.gtc-report .gtc-cards,.gtc-report .gtc-pair{grid-template-columns:1fr}.gtc-report .gtc-steps{grid-template-columns:repeat(2,1fr)}.gtc-report .track .track-row{grid-template-columns:1fr}.gtc-report .track .track-desc{grid-column:1}.gtc-report .metric{min-width:105px}}
+
 </style></head>
 <body><div class="layout"><aside class="aside"><a href="#overview" class="brand">✳ Embodied LAB <small>具身智能 · 研发空间</small></a><nav class="nav"><button data-page="overview" class="active"><b class="symbol">◈</b> 总览 <span>01</span></button><button data-page="projects"><b class="symbol">▦</b> 项目展示 <span>02</span></button><button data-page="knowledge"><b class="symbol">▤</b> 技术知识库 <span>03</span></button><button data-page="workspace"><b class="symbol">⌘</b> 研发工作台 <span>04</span></button></nav><div class="asidefoot">BUILD. LEARN. EMBODY.<br>From simulation to reality.</div></aside><main class="main"><div class="top"><span>EMBODIED INTELLIGENCE / FIELD NOTES</span><span class="status">RESEARCH SPACE · 2026</span></div>
-<section id="overview" class="section active"><div class="hero"><div class="eyebrow">THE EMBODIED INTELLIGENCE FIELD NOTES</div><h1>从仿真到现实，<br>让智能拥有行动力。</h1><p>连接项目、沉淀知识、推进研发。聚焦 VLA、World Model、Agentic Robotics 与机器人自动研发。</p><button class="action" data-go="knowledge">探索最新研究 ↗</button></div><div class="heading row"><div><div class="eyebrow">LATEST INSIGHT / 2026.10.27</div><h2>GTC Berlin 2026 · 从机器人模型到自动研发系统</h2><div class="muted">Isaac Lab 3.0 · Microduck Agent · Cosmos · Isaac OS</div></div><button class="action" data-go="gtc">阅读专题 ↗</button></div><div class="grid two"><div class="card"><div class="num">INSIGHT / 01</div><h3>Agent 自动研发</h3><p>让 AI 参与构建场景、发现失败、提出改进、发起评测；保持独立测试集与审计记录。</p><button class="action" data-go="gtc">查看 GTC 解读 →</button></div><div class="card"><div class="num">RESEARCH / 02</div><h3>Embodied Autoresearch</h3><p>将 RoboLab / RoboDojo、VLA、Cosmos 和本地 VLM 连接为研发闭环与执行闭环。</p><button class="action" data-go="autoresearch">查看技术架构 →</button></div></div><div class="heading"><div class="eyebrow">SELECTED PROJECTS</div><h2>项目与研究仓库</h2></div><div class="grid" id="homeProjects"></div><div class="heading"><div class="eyebrow">RESEARCH → PRACTICE</div><h2>从独立实验到持续演进</h2></div><div class="card"><div class="diagram"><div class="node">真实任务 / 专业约束</div><div class="arrow">↓</div><div class="node accent">AI Research Agent · 任务规划 / 失败诊断 / 候选改进</div><div class="arrow">↓ ↑</div><div class="node">仿真评测 + VLA / VLM / Cosmos</div><div class="arrow">↓</div><div class="node">冻结基线 + 独立验收 + 版本沉淀</div></div></div></section>
+<section id="overview" class="section active"><div class="hero"><div class="eyebrow">THE EMBODIED INTELLIGENCE FIELD NOTES</div><h1>从仿真到现实，<br>让智能拥有行动力。</h1><p>连接项目、沉淀知识、推进研发。聚焦 VLA、World Model、Agentic Robotics 与机器人自动研发。</p><button class="action" data-go="knowledge">探索最新研究 ↗</button></div><div class="heading row"><div><div class="eyebrow">LATEST INSIGHT / 2026.10.27</div><h2>GTC Berlin 2026 · 具身智能全栈演进</h2><div class="muted">模型 × 数据 × 仿真 × Agent × 运行时 × 安全</div></div><button class="action" data-go="gtc">阅读专题 ↗</button></div><div class="grid two"><div class="card"><div class="num">INSIGHT / 01</div><h3>Agent 自动研发</h3><p>让 AI 参与构建场景、发现失败、提出改进、发起评测；保持独立测试集与审计记录。</p><button class="action" data-go="gtc">查看 GTC 解读 →</button></div><div class="card"><div class="num">RESEARCH / 02</div><h3>Embodied Autoresearch</h3><p>将 RoboLab / RoboDojo、VLA、Cosmos 和本地 VLM 连接为研发闭环与执行闭环。</p><button class="action" data-go="autoresearch">查看技术架构 →</button></div></div><div class="heading"><div class="eyebrow">SELECTED PROJECTS</div><h2>项目与研究仓库</h2></div><div class="grid" id="homeProjects"></div><div class="heading"><div class="eyebrow">RESEARCH → PRACTICE</div><h2>从独立实验到持续演进</h2></div><div class="card"><div class="diagram"><div class="node">真实任务 / 专业约束</div><div class="arrow">↓</div><div class="node accent">AI Research Agent · 任务规划 / 失败诊断 / 候选改进</div><div class="arrow">↓ ↑</div><div class="node">仿真评测 + VLA / VLM / Cosmos</div><div class="arrow">↓</div><div class="node">冻结基线 + 独立验收 + 版本沉淀</div></div></div></section>
 <section id="projects" class="section"><div class="eyebrow">PROJECT INDEX</div><h1>项目展示</h1><p class="lead">保留以真实仓库为中心的组织方式，连接药房仿真、统一评测、VLA 和数据研究。</p><div class="grid two heading" id="allProjects"></div></section>
-<section id="knowledge" class="section"><div class="eyebrow">RESEARCH LIBRARY</div><h1>技术知识库</h1><p class="lead">研究文章、技术演进与可操作的实验方法。区分已公开事实、研究判断和待验证假设。</p><div class="grid two heading"><div class="card"><div class="num">行业技术洞察 · 2026.10.27</div><h3>NVIDIA GTC Berlin 2026</h3><p>Isaac Lab 3.0、Microduck、Isaac OS、Cosmos、GR00T 与研发启示。</p><button class="action" data-go="gtc">阅读专题 →</button></div><div class="card"><div class="num">研发方法论 · 2026.10.27</div><h3>Embodied Autoresearch</h3><p>Agent 研究闭环、VLM 监督、动态 Action Chunk、失败驱动数据与独立评测。</p><button class="action" data-go="autoresearch">阅读方法 →</button></div><div class="card"><div class="num">技能实践</div><h3>搭建仿真与任务环境</h3><p>Isaac Lab · 资产管理 · 测试用例与物理一致性。</p><a class="action" href="https://github.com/isaac-sim/IsaacLab" target="_blank" rel="noopener">官方工具 →</a></div><div class="card"><div class="num">技能实践</div><h3>组织 VLA 评测与训练实验</h3><p>基线冻结 · Seed · Clean / Random · 成功率和延迟对照。</p><button class="action" data-go="workspace">打开任务模板 →</button></div></div></section>
-<section id="gtc" class="section article"><div class="breadcrumb"><button class="action" data-go="knowledge">知识库</button> / NVIDIA GTC Berlin 2026</div><div class="eyebrow">INDUSTRY INSIGHT · 2026.10.27</div><h1>GTC Berlin 2026：<br>具身智能的下一步</h1><p class="lead">从更强的机器人模型，转向可自动构建、训练、验证和迭代机器人技能的 AI-native 研发体系。</p><h2>本次大会最重要的六条线索</h2><table><tr><th>方向</th><th>发布内容</th><th>对研发的意义</th></tr><tr><td>Isaac Lab 3.0</td><td>多后端、Kit-less、Warp/ProxyArray、Agent Skills</td><td>训练与仿真解耦，支持更灵活的实验组合</td></tr><tr><td>Microduck Agent</td><td>Agent 组织建模、训练、仿真与验证；公开 4096 环境训练案例</td><td>展示自动研发流程，不等于通用零人工训练</td></tr><tr><td>Isaac OS / Holoscan</td><td>面向传感器、GPU 推理与机器人运行时</td><td>重点在真实机器人数据流和控制集成</td></tr><tr><td>SimReady / Human 1M</td><td>仿真资产与多视角人类数据</td><td>降低资产及动作数据准备门槛，注意授权范围</td></tr><tr><td>GR00T / Cosmos</td><td>策略后训练与世界模型/合成数据工作流</td><td>从一次训练转向针对失败的改进</td></tr><tr><td>Halos</td><td>安全开发、监控和可追溯验证</td><td>成功率之外增加可靠性和安全证据</td></tr></table><h2>Microduck 的技术启发</h2><div class="diagram"><div class="node">自然语言任务 / 场景约束</div><div class="arrow">↓</div><div class="node accent">Agent 规划与工具调用 <span class="mini">Hermes · Nemotron · Astra</span></div><div class="arrow">↓</div><div class="node">场景和模型资产创建 <span class="mini">FreeCAD · Blender · Isaac Sim · Newton</span></div><div class="arrow">↓</div><div class="node">大规模策略训练与评测 <span class="mini">Isaac Lab · GPU 并行环境</span></div><div class="arrow">↓</div><div class="node">实体部署与反馈</div></div><p>关键不在“自动生成一个演示”，而在可观察的研发工具链。真实价值需要用固定训练预算、独立测试任务、失败复现和代码版本审计来衡量。</p><h2>适用于当前项目的结论</h2><ul><li><strong>先做统一评测接口：</strong>优先统一任务、策略、日志、指标，不急于全部重构 RoboLab/RoboDojo。</li><li><strong>先做 VLM 纠偏实验：</strong>固定 50 步 Chunk 与部分执行重规划、动态窗口、异常检测、恢复策略做消融。</li><li><strong>失败驱动数据：</strong>对贴边、遮挡、条码方向等典型异常生成受控样本，再在未见场景验收。</li><li><strong>谨慎迁移 3.0：</strong>四元数顺序和数据 API 有破坏性变化，单独测试，不污染现有基线。</li><li><strong>Isaac OS 暂缓：</strong>仿真研发阶段优先级低于 Agent 工作流和独立评测。</li></ul><h2>原始资料</h2><div class="links"><a target="_blank" rel="noopener" href="https://github.com/isaac-sim/IsaacLab/releases">Isaac Lab Releases</a><a target="_blank" rel="noopener" href="https://github.com/nvidia-holoscan/holoscan-sdk">Holoscan SDK</a><a target="_blank" rel="noopener" href="https://github.com/NVIDIA-ISAAC-ROS">Isaac ROS</a><a target="_blank" rel="noopener" href="https://github.com/zmf2022/embodied-aI-wiki/blob/main/研究洞察/GTC_2026_Berlin_具身智能与后续研发路线.md">完整研究笔记</a></div><p class="small">注：大会发布、技术判断、待验证目标已做区分；本页面不表示网站已复现实验。</p></section>
+<section id="knowledge" class="section"><div class="eyebrow">RESEARCH LIBRARY</div><h1>技术知识库</h1><p class="lead">研究文章、技术演进与可操作的实验方法。区分已公开事实、研究判断和待验证假设。</p><div class="grid two heading"><div class="card"><div class="num">行业技术洞察 · 2026.10.27</div><h3>NVIDIA GTC Berlin 2026</h3><p>十二章节完整解析：Isaac Lab 3.0、Microduck、GR00T、Cosmos、Isaac OS、技术趋势与产业生态。</p><button class="action" data-go="gtc">阅读专题 →</button></div><div class="card"><div class="num">研发方法论 · 2026.10.27</div><h3>Embodied Autoresearch</h3><p>Agent 研究闭环、VLM 监督、动态 Action Chunk、失败驱动数据与独立评测。</p><button class="action" data-go="autoresearch">阅读方法 →</button></div><div class="card"><div class="num">技能实践</div><h3>搭建仿真与任务环境</h3><p>Isaac Lab · 资产管理 · 测试用例与物理一致性。</p><a class="action" href="https://github.com/isaac-sim/IsaacLab" target="_blank" rel="noopener">官方工具 →</a></div><div class="card"><div class="num">技能实践</div><h3>组织 VLA 评测与训练实验</h3><p>基线冻结 · Seed · Clean / Random · 成功率和延迟对照。</p><button class="action" data-go="workspace">打开任务模板 →</button></div></div></section>
+<section id="gtc" class="section gtc-report">
+<div class="breadcrumb"><button class="action" data-go="knowledge">技术知识库</button> / GTC Berlin 2026 · Physical AI</div>
+<header class="gtc-hero">
+<div class="eyebrow">NVIDIA GTC BERLIN 2026 / PHYSICAL AI INTELLIGENCE REPORT</div>
+<h1>具身智能进入<br>「全栈闭环」时代</h1>
+<p>GTC Berlin 最重要的变化，不是又推出一款机器人基础模型，而是将<strong>数据、仿真、机器人学习、Agent 开发工作流、机器人运行时与安全验证</strong>连接成完整研发路径。</p>
+<div class="hero-meta">NVIDIA 官方发布：2026.10.21　·　Microduck 技术案例：2026.10.23　·　本期分析更新：2026.10.27</div>
+</header>
+<div class="gtc-nav"><div class="row"><b style="font-size:13px">专题导航</b><span class="small">发布事实与研究判断分别标记</span></div>
+<div class="gtc-nav-grid">
+<button data-jump="g-core">01 · 核心判断</button><button data-jump="g-stack">02 · 技术全景</button>
+<button data-jump="g-launch">03 · 七项发布</button><button data-jump="g-microduck">04 · Microduck</button>
+<button data-jump="g-isaaclab">05 · Isaac Lab 3.0</button><button data-jump="g-data">06 · 数据与模型</button>
+<button data-jump="g-runtime">07 · Isaac OS</button><button data-jump="g-trends">08 · 五大趋势</button>
+<button data-jump="g-ecosystem">09 · 产业信号</button><button data-jump="g-implication">10 · 研发启示</button>
+<button data-jump="g-status">11 · 成熟度判断</button><button data-jump="g-sources">12 · 官方来源</button>
+</div></div>
+
+<div class="report-section" id="g-core">
+<div class="chapter-title"><span class="chapter-number">01</span><div><h2>核心判断：竞争从单个机器人模型转向完整系统</h2><p>THE BIG PICTURE</p></div></div>
+<p class="report-lead">过去大家主要比较 VLA 在标准 Benchmark 上的成功率；这次发布传递的信号是：<strong>机器人能力的突破越来越依赖数据生产、物理仿真、后训练、部署与安全的协同效率。</strong></p>
+<div class="gtc-metric-line">
+<div class="metric"><strong>3.0</strong><span>Isaac Lab 正式可用版本</span></div>
+<div class="metric"><strong>2,000+</strong><span>SimReady Central 仿真资产</span></div>
+<div class="metric"><strong>3 条</strong><span>DGX Station 开源参考工作流</span></div>
+</div>
+<div class="insight-banner"><strong>洞察一：模型越来越像通用能力底座，真正的研发效率取决于闭环。</strong><p>GR00T 负责通用动作能力，Isaac Lab 负责可控学习与评测，Cosmos 连接世界建模和合成数据，Isaac OS 负责实体运行时，Agent 参与开发流程编排。这是技术分工的变化，而非任何单一模型已解决通用操作。</p></div>
+<p class="evidence">发布事实：<a target="_blank" rel="noopener" href="https://blogs.nvidia.cn/blog/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data/">NVIDIA 中文新闻稿（10 月 21 日）</a></p>
+</div>
+
+<div class="report-section" id="g-stack">
+<div class="chapter-title"><span class="chapter-number">02</span><div><h2>看懂 NVIDIA 具身智能全栈技术图谱</h2><p>FROM DATA TO DEPLOYMENT</p></div></div>
+<p>这不是一个线性的产品清单，而是相互反馈的研发系统。不同组件解决不同问题，避免把 Isaac Lab、Cosmos、GR00T、Holoscan 误认为可互相替代。</p>
+<div class="track">
+<div class="track-row"><b>真实数据采集</b><span class="track-product">Isaac Capture · Human 1M</span><span class="track-desc">视频、多视角人体动作、手部轨迹；连接真实世界与训练数据</span></div>
+<div class="track-row"><b>资产与世界</b><span class="track-product">SimReady · Cosmos · Omniverse</span><span class="track-desc">可复用物理资产、世界建模、合成数据、渲染</span></div>
+<div class="track-row"><b>仿真与物理</b><span class="track-product">Isaac Sim · Newton · PhysX</span><span class="track-desc">环境、传感器、物理接触和执行反馈</span></div>
+<div class="track-row"><b>策略训练</b><span class="track-product">Isaac Lab 3.0 · RL / IL</span><span class="track-desc">并行环境、后训练、强化学习、闭环评测</span></div>
+<div class="track-row"><b>智能模型</b><span class="track-product">GR00T 1.7 · Agent 工作流</span><span class="track-desc">具身策略基础模型；智能体辅助研发与策略迭代</span></div>
+<div class="track-row"><b>机器人部署</b><span class="track-product">Isaac OS · Holoscan · Jetson Thor</span><span class="track-desc">传感器输入、GPU 推理、控制与硬件连接</span></div>
+<div class="track-row"><b>安全与验证</b><span class="track-product">Halos · 实体验证</span><span class="track-desc">安全监测、约束、验证及真实环境反馈</span></div>
+</div>
+<div class="insight-banner"><strong>关键不是“每一层都使用 NVIDIA”，而是各层通过统一数据、任务和评测标准形成迭代回路。</strong><p>这使开源工具、不同本体和第三方 VLA 有机会接入同一研发平台，但跨平台的物理一致性与评测公正性需要独立验证。</p></div>
+</div>
+
+<div class="report-section" id="g-launch">
+<div class="chapter-title"><span class="chapter-number">03</span><div><h2>七项最重要的具身智能发布</h2><p>RELEASES &amp; CAPABILITY SHIFTS</p></div></div>
+<div class="gtc-cards">
+<div class="gtc-card"><div class="chip">ROBOT LEARNING</div><h3>Isaac Lab 3.0</h3><p>正式发布多后端机器人学习框架，支持 PhysX、Newton 及可组合的渲染/可视化；强调 Agent-ready、多 GPU 训练和 Kit-less 工作流。</p><small>状态：官方 GA / 开源</small></div>
+<div class="gtc-card"><div class="chip">ROBOT RUNTIME</div><h3>Isaac OS</h3><p>基于 Holoscan 的运行时框架，连接 AI、传感器、机器人控制与硬件。意义在实际机器人部署，而非取代仿真环境。</p><small>状态：官方宣布开源；完整独立源码入口待核实</small></div>
+<div class="gtc-card"><div class="chip">DATA ENGINE</div><h3>SimReady Central</h3><p>提供超过 2,000 个仿真就绪机器人和工厂资产，强调工业资产复用和减少场景搭建成本。</p><small>状态：资产库已宣布开放访问</small></div>
+<div class="gtc-card"><div class="chip">HUMAN DATA</div><h3>Human 1M</h3><p>跨场景人体活动数据，包含同步三视角视频与 3D 手部跟踪；为人类行为与机器人学习提供动作先验。</p><small>状态：部分可访问；完整数据面向合作伙伴</small></div>
+<div class="gtc-card"><div class="chip">POLICY &amp; WORLD MODEL</div><h3>GR00T 1.7 × Cosmos</h3><p>三条开源参考工作流涵盖 GR00T 1.7 的 RL 精炼、Isaac Lab 灵巧操作训练、Cosmos 后训练以生成合成数据。</p><small>状态：参考工作流发布；具体版本与源码独立核查</small></div>
+<div class="gtc-card"><div class="chip">REFERENCE ROBOT</div><h3>Agile ONE SN</h3><p>基于 GR00T 与 Jetson Thor 的开放人形参考平台，搭配灵巧手与多模态传感器，降低软硬件集成门槛。</p><small>状态：发布，计划 2027 年初提供</small></div>
+<div class="gtc-card"><div class="chip">SAFETY</div><h3>NVIDIA Halos</h3><p>面向机器人与自治系统的安全开发及验证基础设施；强调部署不只需要模型成功率，还需要行为约束与风险证据。</p><small>状态：平台及生态持续扩展</small></div>
+</div><p class="evidence">来源：<a target="_blank" rel="noopener" href="https://nvidianews.nvidia.com/news/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data/">官方机器人平台发布</a> · <a target="_blank" rel="noopener" href="https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/">官方 GTC 主题演讲回顾</a></p>
+</div>
+
+<div class="report-section" id="g-microduck">
+<div class="chapter-title"><span class="chapter-number">04</span><div><h2>Microduck：此次大会最值得研究的开发范式</h2><p>AGENTIC ROBOT DEVELOPMENT</p></div></div>
+<p class="report-lead">Microduck 的突破点不在“小机器人会走路”，而在于把原本依赖多人多工具切换的研发流程组织成一个<strong>Agent 可参与的工具链</strong>。</p>
+<div class="gtc-steps">
+<div class="gtc-step"><b>01 任务规划</b><small>Hermes / Nemotron<br>需求与约束</small></div>
+<div class="gtc-step"><b>02 资产生成</b><small>Astra / FreeCAD<br>Blender / USD</small></div>
+<div class="gtc-step"><b>03 仿真装配</b><small>Isaac Sim<br>Newton 物理</small></div>
+<div class="gtc-step"><b>04 并行训练</b><small>Isaac Lab<br>RL / 4096 环境</small></div>
+<div class="gtc-step"><b>05 本地验证</b><small>RTX Spark<br>轨迹与碰撞检查</small></div>
+<div class="gtc-step"><b>06 实体过渡</b><small>BAM / 随机化<br>Sim-to-Real</small></div>
+</div>
+<div class="gtc-pair">
+<div class="card"><div class="num">官方实际展示</div><h3>基于特定任务的可编排研发</h3><p>Agent 规划与组装仿真环境；在 RTX PRO 6000 Blackwell Workstation Edition 上以 4,096 个环境继续训练预训练运动策略，并进行本地仿真验证。</p></div>
+<div class="card"><div class="num">不应夸大的部分</div><h3>不是通用自主科研已实现</h3><p>该案例主要是 locomotion / 障碍场景；并未证明任意机器人操作任务可以无人审核完成、任意 VLA 可以直接提升或 Sim-to-Real 保证成功。</p></div>
+</div>
+<div class="insight-banner"><strong>洞察二：Agent 是研发流程的执行与协调层，仿真和评测提供真实反馈。</strong><p>研发自动化的关键在于工具接口、资产检查、可追溯任务记录与测试门禁，而非模型在每一步都拥有最终决策权。</p></div>
+<p class="evidence"><a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation/">NVIDIA Technical Blog：Microduck 全流程技术说明（2026-10-23）</a></p>
+</div>
+
+<div class="report-section" id="g-isaaclab">
+<div class="chapter-title"><span class="chapter-number">05</span><div><h2>Isaac Lab 3.0：从单一仿真训练走向多后端基础设施</h2><p>ARCHITECTURAL SHIFT</p></div></div>
+<p>这次的重大变化不是新增几个任务，而是重新组织底层：机器人资产、物理引擎、渲染、数据路径与可视化可以相对独立选择。</p>
+<div class="gtc-cards">
+<div class="gtc-card"><div class="chip">PHYSICS</div><h3>多后端物理</h3><p>统一接口支持 PhysX、Newton/MJWarp 等后端；不同后端的任务和接触特性仍有兼容性边界。</p></div>
+<div class="gtc-card"><div class="chip">RUNTIME</div><h3>Kit-less 模式</h3><p>部分训练不再必须完整启动 Isaac Sim Kit；适合高吞吐、非高保真渲染的物理学习实验。</p></div>
+<div class="gtc-card"><div class="chip">MEMORY</div><h3>Warp / ProxyArray</h3><p>增强 GPU 原生数据路径，减少多层张量搬运；不等于所有自定义 PyTorch 算法无需适配。</p></div>
+<div class="gtc-card"><div class="chip">RENDER</div><h3>渲染与可视化解耦</h3><p>分离物理、渲染和可视化后端，使纯训练、高保真传感器仿真和远程观察有不同的成本组合。</p></div>
+<div class="gtc-card"><div class="chip">BENCHMARK</div><h3>统一训练/评测接口</h3><p>启动、运行时与训练 Benchmark 更规范，有利于在相同设置下比较不同后端。</p></div>
+<div class="gtc-card"><div class="chip">AGENT READY</div><h3>工具可编排</h3><p>与 Agent Skills 和配置体系配合，让自动生成任务、调试和调用评测工具更可行。</p></div>
+</div>
+<div class="insight-banner"><strong>洞察三：未来 Benchmark 的关键不是“哪个仿真器最流行”，而是统一任务语义下的可复现性。</strong><p>同一任务在不同物理引擎下的接触解、传感器模型和数值参数可能不同；迁移不应默认成功率具有可比性。</p></div>
+<div class="method-note">工程注意：从 Isaac Lab 2.x 升级 3.0 涉及四元数 WXYZ → XYZW、Tensor → ProxyArray、数据访问与写入 API 的变化。独立迁移分支应先通过坐标、接触、观测维度、奖励和动作时序的回归验证。</div>
+<p class="evidence"><a target="_blank" rel="noopener" href="https://docs.nvidia.com/isaaclab/3.0/references/release-notes">Isaac Lab 3.0 Release Notes</a> · <a target="_blank" rel="noopener" href="https://docs.nvidia.com/isaaclab/3.0/isaac-lab/migrating-to-3-0">官方迁移文档</a></p>
+</div>
+
+<div class="report-section" id="g-data">
+<div class="chapter-title"><span class="chapter-number">06</span><div><h2>数据、世界模型与基础策略：正在形成生产流水线</h2><p>DATA ENGINE &amp; MODEL POST-TRAINING</p></div></div>
+<div class="gtc-pair">
+<div class="card"><div class="num">DATA SUPPLY</div><h3>Human 1M + SimReady</h3><p>人类多视角动作数据提供真实运动先验；仿真资产提供交互世界的几何、外观和物理对象。数据可用性、场景相关性与动作映射仍需验证。</p></div>
+<div class="card"><div class="num">SKILL ADAPTATION</div><h3>GR00T 1.7 + RL</h3><p>基于通用机器人模型，利用专业技能数据与仿真反馈进行后训练，而不是每个任务都从头预训练一个基础模型。</p></div>
+<div class="card"><div class="num">WORLD GENERATION</div><h3>Cosmos 世界模型</h3><p>用于世界/视频相关建模与合成数据生成；需要验证生成内容的物理、时间与操作语义是否可靠。</p></div>
+<div class="card"><div class="num">SIMULATION</div><h3>Isaac Lab 训练与验收</h3><p>合成数据、奖励与策略形成循环，但训练阶段增强并不自动证明未知分布泛化；必须保留独立测试。</p></div>
+</div>
+<div class="quote-line" style="margin-top:18px">洞察四：数据价值的衡量应从“样本规模”转为“能覆盖多少失败模式、能提高多少真实任务可靠性”。</div>
+<p class="evidence">NVIDIA 10 月 21 日公布三条开源参考工作流：GR00T 1.7 RL 精炼、灵巧操作训练、Cosmos 后训练。不要将其他场合提及的“Cosmos 3 Nano 汽车模型”误写成本次机器人的独立产品发布。</p>
+</div>
+
+<div class="report-section" id="g-runtime">
+<div class="chapter-title"><span class="chapter-number">07</span><div><h2>Isaac OS 与 Holoscan：补上机器人真实运行时</h2><p>ROBOT RUNTIME &amp; REAL-TIME EXECUTION</p></div></div>
+<p>Isaac Lab 解决<strong>“如何训练和评测策略”</strong>；Isaac OS 被定位为<strong>“如何把感知、模型推理、控制和硬件组织成可靠的运行系统”</strong>。Holoscan 主要提供高性能 GPU 数据流执行与算子编排。</p>
+<div class="diagram"><div class="node">相机 / 深度 / 触觉 / 机器人状态</div><div class="arrow">↓</div><div class="node accent">Holoscan · 数据流 / GPU 感知 / 推理算子</div><div class="arrow">↓</div><div class="node">Isaac OS · 运行时集成与控制连接</div><div class="arrow">↓</div><div class="node">机器人执行器 / 安全控制 / 实体反馈</div></div>
+<table><tr><th>系统</th><th>主要职责</th><th>不负责什么</th></tr><tr><td>Isaac Lab</td><td>RL/IL 训练、并行仿真与 Benchmark</td><td>不是实体机器人实时 OS</td></tr><tr><td>Holoscan SDK</td><td>低延迟传感器数据流、GPU 算子与推理编排</td><td>不是 VLA 基础模型</td></tr><tr><td>ROS 2</td><td>机器人设备通信、节点、消息和系统生态</td><td>不自动保证硬实时或模型准确率</td></tr><tr><td>Isaac OS</td><td>面向机器人感知—推理—控制的运行时整合</td><td>不替代仿真和模型训练</td></tr></table>
+<div class="method-note"><strong>开源状态核查：</strong>NVIDIA 官方新闻稿把 Isaac OS 描述为开源框架，但截至本专题整理时未确认独立、完整、可直接集成的公开源码仓库。Holoscan SDK 已有开源仓库；不应将两者等同，也不能仅凭“实时”措辞推断机器人控制链路符合硬实时保障。</div>
+<p class="evidence"><a target="_blank" rel="noopener" href="https://github.com/nvidia-holoscan/holoscan-sdk">Holoscan SDK 开源代码</a> · <a target="_blank" rel="noopener" href="https://github.com/NVIDIA-ISAAC-ROS">Isaac ROS 相关组件</a></p>
+</div>
+
+<div class="report-section" id="g-trends">
+<div class="chapter-title"><span class="chapter-number">08</span><div><h2>由官方发布归纳的五大具身智能趋势</h2><p>TECHNICAL OUTLOOK · ANALYSIS, NOT OFFICIAL CLAIMS</p></div></div>
+<div class="gtc-cards">
+<div class="gtc-card"><div class="chip">TREND 01</div><h3>通用基础模型 + 专业技能后训练</h3><p>GR00T 1.7 的 RL 工作流说明，应用落地越来越依靠与真实任务匹配的适配与验证，而非单纯增加基础模型规模。</p></div>
+<div class="gtc-card"><div class="chip">TREND 02</div><h3>Agent 化机器人研发</h3><p>Microduck 用 Agent 串联规划、建模与仿真验证。AI 从辅助写代码转向协调研究工具与执行受控实验。</p></div>
+<div class="gtc-card"><div class="chip">TREND 03</div><h3>多物理引擎、可组合仿真</h3><p>Isaac Lab 3.0 暗示训练吞吐、传感器真实性、可视化和部署验证将按任务取舍，而不是固定在同一重型应用中。</p></div>
+<div class="gtc-card"><div class="chip">TREND 04</div><h3>数据引擎与世界模型融合</h3><p>从可复用资产、人体动作数据到 Cosmos 世界数据生成，再回到后训练与错误分布覆盖。</p></div>
+<div class="gtc-card"><div class="chip">TREND 05</div><h3>从任务成功率走向可验证可靠性</h3><p>Isaac OS、Jetson Thor 与 Halos 体现从实验室单点动作到实体连续运行、安全与故障处理的工程重心。</p></div>
+</div>
+<div class="insight-banner"><strong>综合判断：Physical AI 平台化，是本次 GTC 对具身智能最重要的长期信号。</strong><p>领先者越来越关注“开发—验证—数据回流—再训练”的速度和可靠性，而不只是一个 Demo 的峰值表现。以上为基于大会发布的技术解读，不代表 NVIDIA 对未来效果的承诺。</p></div>
+</div>
+
+<div class="report-section" id="g-ecosystem">
+<div class="chapter-title"><span class="chapter-number">09</span><div><h2>产业生态信号：通用底座连接多种机器人本体</h2><p>INDUSTRY ADOPTION</p></div></div>
+<table><tr><th>企业 / 平台</th><th>官方披露的合作方向</th><th>启发</th></tr>
+<tr><td>Agile Robots</td><td>Agile ONE SN 人形参考平台，GR00T、Jetson Thor，计划接入 Halos</td><td>软硬件参考栈减少集成准备工作</td></tr>
+<tr><td>ABB Robotics / KUKA</td><td>Omniverse 与工业机器人仿真、虚拟调试工具结合</td><td>工业平台兼容与数字孪生仍然重要</td></tr>
+<tr><td>Sereact / Universal Robots</td><td>GR00T 与 Cosmos Transfer 支持货物处理策略后训练</td><td>通用机器人模型与专业作业场景结合</td></tr>
+<tr><td>Humanoid / Hexagon Robotics / Bear Robotics</td><td>Jetson Thor、Holoscan、Isaac OS、GR00T 等不同组合</td><td>运行时与感知推理连接多种形态机器人</td></tr></table>
+<p class="method-note">这些是合作与应用方向披露，不能直接据此推断已形成大规模稳定商用或跨机器人本体零成本迁移。</p>
+</div>
+
+<div class="report-section" id="g-implication">
+<div class="chapter-title"><span class="chapter-number">10</span><div><h2>对现有具身研发最直接的启示</h2><p>APPLIED TAKEAWAYS · BRIEF ONLY</p></div></div>
+<p>以现有 Isaac Lab / RoboLab / RoboDojo / RoboTwin、VLA 与本地 VLM 能力为起点，不必复制 NVIDIA 的整套生态，而应把这次大会归纳为三个研究问题：</p>
+<div class="gtc-cards">
+<div class="gtc-card"><div class="chip">RESEARCH QUESTION A</div><h3>Agent 能否提高研发效率？</h3><p>让 Agent 自动汇总失败、生成候选场景与实验配置，交给统一 Benchmark 执行；独立测试决定是否采纳。</p></div>
+<div class="gtc-card"><div class="chip">RESEARCH QUESTION B</div><h3>如何改善 VLA 泛化与执行可靠性？</h3><p>围绕动作 Chunk、VLM 监督与恢复策略作受控消融，记录 Clean/Random、时间开销及失败类型。</p></div>
+<div class="gtc-card"><div class="chip">RESEARCH QUESTION C</div><h3>专业数据如何形成闭环？</h3><p>优先覆盖药盒贴边、遮挡、条码方向及操作交接等失败模式，利用数据增强与仿真检查真实收益。</p></div>
+</div>
+<div class="insight-banner"><strong>主线仍然是 GTC 技术判断，而不是把这篇大会报告写成个人项目日报。</strong><p>实验明细、Autoresearch 技术架构和八周研发任务保留在独立研究页面：<button class="action" data-go="autoresearch">查看 Embodied Autoresearch →</button></p></div>
+</div>
+
+<div class="report-section" id="g-status">
+<div class="chapter-title"><span class="chapter-number">11</span><div><h2>开源成熟度与投入优先级</h2><p>WHAT IS AVAILABLE VS. WHAT IS ANNOUNCED</p></div></div>
+<table><tr><th>方向</th><th>可用性判断</th><th>研究优先级</th></tr>
+<tr><td>Isaac Lab 3.0</td><td><span class="status-dot"></span>正式版 / 开源；需迁移适配</td><td>高（隔离分支）</td></tr>
+<tr><td>Microduck 技术流程</td><td><span class="status-dot"></span>案例与方法已公开；定制化重建</td><td>高（方法参考）</td></tr>
+<tr><td>SimReady Central</td><td><span class="status-dot"></span>开放资产库；检查资产许可与物理质量</td><td>中高</td></tr>
+<tr><td>Human 1M</td><td><span class="status-dot pending"></span>完整集访问受合作资格约束</td><td>中</td></tr>
+<tr><td>GR00T 1.7 相关工作流</td><td><span class="status-dot"></span>官方宣布开源参考工作流；具体依赖需确认</td><td>中高</td></tr>
+<tr><td>Isaac OS</td><td><span class="status-dot pending"></span>开源宣布已发布；完整公开仓库待核实</td><td>真实部署时优先</td></tr>
+<tr><td>Agile ONE SN</td><td><span class="status-dot pending"></span>计划 2027 年初提供</td><td>长期观察</td></tr></table>
+</div>
+
+<div class="report-section" id="g-sources">
+<div class="chapter-title"><span class="chapter-number">12</span><div><h2>官方来源与核验边界</h2><p>PRIMARY SOURCES</p></div></div>
+<div class="card gtc-ref">
+<p><b>01 / NVIDIA 官方新闻稿</b><br><a target="_blank" rel="noopener" href="https://blogs.nvidia.cn/blog/nvidia-advances-isaac-platform-for-general-purpose-robotics-with-new-reference-humanoid-frameworks-simulation-pipelines-and-data/">NVIDIA：面向通用机器人的 Isaac 平台扩展（中文，2026-10-21）</a></p>
+<p><b>02 / NVIDIA 主旨演讲</b><br><a target="_blank" rel="noopener" href="https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/">GTC Berlin 2026 Jensen Huang Keynote Highlights</a></p>
+<p><b>03 / NVIDIA 技术复现文章</b><br><a target="_blank" rel="noopener" href="https://developer.nvidia.com/blog/using-ai-agents-to-teach-robots-like-microduck-to-walk-in-simulation/">Microduck：AI Agents → 资产生成 → Isaac Lab 训练 → 验证（2026-10-23）</a></p>
+<p><b>04 / Isaac Lab 官方文档</b><br><a target="_blank" rel="noopener" href="https://docs.nvidia.com/isaaclab/3.0/references/release-notes">3.0 Release Notes</a> · <a target="_blank" rel="noopener" href="https://docs.nvidia.com/isaaclab/3.0/isaac-lab/migrating-to-3-0">Migrating to 3.0</a></p>
+<p><b>05 / 开源代码与工具</b><br><a target="_blank" rel="noopener" href="https://github.com/isaac-sim/IsaacLab">Isaac Lab</a> · <a target="_blank" rel="noopener" href="https://github.com/nvidia-holoscan/holoscan-sdk">Holoscan SDK</a> · <a target="_blank" rel="noopener" href="https://github.com/NVIDIA-ISAAC-ROS">Isaac ROS</a></p>
+</div>
+<p class="method-note">发布日期为 2026 年 10 月；开源、访问和生态状态属于截至本页更新时间的判断，后续会变化。本专题刻意区分“官方发布内容”“公开案例演示”“技术分析”和“待验证实验结果”，避免将预期成果写成已实现能力。</p>
+</div>
+</section>
 <section id="autoresearch" class="section article"><div class="breadcrumb"><button class="action" data-go="knowledge">知识库</button> / 研究方向</div><div class="eyebrow">RESEARCH DIRECTION</div><h1>Embodied Autoresearch</h1><p class="lead">让 AI Agent 参与机器人策略研发：自动诊断失败、提出候选改进、执行受控实验，并在独立测试集上验证收益。</p><h2>研发闭环与执行闭环</h2><div class="grid two"><div class="card"><h3>研发闭环 · Offline</h3><p>生成场景 → 运行策略 → 失败分析 → 提出候选数据/策略 → 独立测试 → 版本沉淀</p><span class="pill">Research Agent</span><span class="pill">Benchmark</span></div><div class="card"><h3>执行闭环 · Online</h3><p>VLA 动作 → 部分执行/重观测 → VLM 异常检查 → 中断与恢复</p><span class="pill">Chunk Policy</span><span class="pill">VLM Supervisor</span></div></div><h2>六组对照实验</h2><table><tr><th>实验</th><th>方法</th><th>验证问题</th></tr><tr><td>A0</td><td>原始固定 50 步 Chunk</td><td>冻结基线</td></tr><tr><td>A1</td><td>短窗口重新观测</td><td>提高闭环频率是否有效</td></tr><tr><td>A2</td><td>动态执行窗口</td><td>时延与可靠性权衡</td></tr><tr><td>A3</td><td>VLM 监督与恢复</td><td>能否减少语义错误</td></tr><tr><td>A4</td><td>动态窗口 + VLM</td><td>是否互补</td></tr><tr><td>A5</td><td>A4 + 失败驱动数据</td><td>未见分布是否改善</td></tr></table><p>历史观察：某次 RoboTwin 评测中 Clean ≈77%，Random ≈47%；这属于特定模型/配置，不应误作公开排行榜。成功率改善 5 个百分点只是研究目标，不是已验证结果。</p><h2>失败驱动的数据生产</h2><div class="diagram"><div class="node">贴边/遮挡抓取失败</div><div class="arrow">↓</div><div class="node accent">碰撞日志 + 轨迹 + VLM 错误归因</div><div class="arrow">↓</div><div class="node">场景参数扰动与有效示范采集</div><div class="arrow">↓</div><div class="node">候选训练 → 冻结场景独立回归 → 保留或回滚</div></div><p>面向医疗康养，除抓取成功率之外，还应验证对象身份、目标位置、条码朝向、交接反馈与安全中断；涉及人员数据须具备授权和合规条件。</p><button class="ghost" data-go="workspace">查看八周实施路线 →</button></section>
 <section id="workspace" class="section"><div class="eyebrow">RESEARCH WORKSPACE</div><h1>研发工作台</h1><p class="lead">八周 Embodied Autoresearch 任务模板。勾选进度只保存在当前浏览器，不会覆盖你原站点的工作台数据。</p><div class="card heading"><div class="row"><h3>2026 Q4 · 自动研发闭环 MVP</h3><button class="ghost" id="resetTasks">重置此模板</button></div><div id="progress" class="small"></div><div id="tasks"></div></div><div class="grid two"><div class="card"><div class="num">SUCCESS METRICS</div><h3>实验验收</h3><p>跨任务成功率 · Random/Clean 泛化差距 · 异常召回率 · 推理时延 · GPU 成本 · 回归退化。</p></div><div class="card"><div class="num">DELIVERABLES</div><h3>项目交付</h3><p>可复现 Benchmark、失败案例库、动态 Chunk/VLM 消融、Agent 实验流程、技术报告与 Demo。</p></div></div></section><div class="footer">EMBODIED LAB / 从仿真到现实 · Site source edition 2026.10.27 · 实验模板保存在当前浏览器 · <a href="https://github.com/zmf2022" target="_blank" rel="noopener">GitHub ↗</a></div></main></div>
 <script>
@@ -20,4 +249,5 @@ const plan=[["W1–W2","冻结 RoboLab/RoboDojo/RoboTwin 的任务、seed、chec
 let done={};try{done=JSON.parse(localStorage.getItem("embodiedlab:roadmap:2026q4")||"{}")}catch{}
 function renderTasks(){document.querySelector("#tasks").innerHTML=plan.map((t,i)=>'<label class="work-item"><input type="checkbox" data-task="'+i+'" '+(done[i]?"checked":"")+'><div><div class="'+(done[i]?"done":"")+'">'+t[1]+'</div><div class="small">'+t[0]+' · '+(done[i]?"已完成":"计划中")+'</div></div></label>').join("");let n=plan.filter((_,i)=>done[i]).length;document.querySelector("#progress").textContent=n+" / "+plan.length+" 项完成 · "+Math.round(n/plan.length*100)+"%";document.querySelectorAll("[data-task]").forEach(e=>e.addEventListener("change",()=>{done[e.dataset.task]=e.checked;localStorage.setItem("embodiedlab:roadmap:2026q4",JSON.stringify(done));renderTasks()}))}
 document.querySelector("#resetTasks").addEventListener("click",()=>{if(confirm("仅重置此网页的八周任务模板？")){done={};localStorage.removeItem("embodiedlab:roadmap:2026q4");renderTasks()}});renderTasks();
+document.querySelectorAll("[data-jump]").forEach(e=>e.addEventListener("click",()=>{const s=document.getElementById(e.dataset.jump);if(s)s.scrollIntoView({behavior:"smooth",block:"start"})}));
 </script></body></html>
