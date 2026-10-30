@@ -4,7 +4,9 @@
 
 ## 结构
 
-- `site/index.html`：单文件 HTML/CSS/JavaScript，包含总览、项目展示、GTC 2026 专题、智元创新日 / Agentic Robot Learning 12 章专题、Embodied Autoresearch 和八周研发工作台模板。
+- `site/index.html`：单文件 HTML/CSS/JavaScript，包含总览、项目展示、GTC 2026 专题、智元创新日 / Agentic Robot Learning 专题、Embodied Autoresearch 和八周研发工作台模板。
+- `site/frontier-2026.html`：Google DeepMind、阿里 Rynn、Figure AI 2026 Q3–Q4 技术战略可视化专题（同一 Pages 网站下的独立深度页面）。
+- `研究洞察/头部具身智能技术战略_2026Q3Q4_Google_阿里_Figure.md`：三家公司技术架构、实验对照与研发现状的长文版。
 - `研究洞察/GTC_2026_Berlin_具身智能与后续研发路线.md`：GTC 长文版本。
 - `研究洞察/智元创新日2026_全栈技术演示与自进化洞察.md`：智元技术与 Agentic Robot Learning 长文版本。
 - `README.md`：现有知识库主页，保留原有论文技术分析。
