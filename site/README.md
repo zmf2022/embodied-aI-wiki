@@ -4,8 +4,9 @@
 
 ## 结构
 
-- `site/index.html`：单文件 HTML/CSS/JavaScript，包含总览、项目展示、GTC 2026 研究专题、Embodied Autoresearch 和八周研发工作台模板。
-- `研究洞察/GTC_2026_Berlin_具身智能与后续研发路线.md`：研究内容的长文档版本（仓库根目录下）。
+- `site/index.html`：单文件 HTML/CSS/JavaScript，包含总览、项目展示、GTC 2026 专题、智元创新日 / Agentic Robot Learning 12 章专题、Embodied Autoresearch 和八周研发工作台模板。
+- `研究洞察/GTC_2026_Berlin_具身智能与后续研发路线.md`：GTC 长文版本。
+- `研究洞察/智元创新日2026_全栈技术演示与自进化洞察.md`：智元技术与 Agentic Robot Learning 长文版本。
 - `README.md`：现有知识库主页，保留原有论文技术分析。
 
 ## 本地预览
@@ -30,4 +31,4 @@ python3 -m http.server 8000
 1. 不再新建同用途独立仓库；网页、研究内容与技术路线统一归档在此仓库。
 2. 研究内容区分官方发布、推断与待验证实验目标。
 3. 展示数据不等于已验证性能；所有算法对比应附相同任务、随机种子与独立测试。
-4. 该仓库目前为私有，外部网站托管与公开范围须单独审核。
+4. 当前 GitHub 仓库已公开；发布研究内容和场景图片前应核查保密、授权、数据合规与引用来源。
